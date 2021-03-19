@@ -100,9 +100,10 @@ public class ConfiguracoesNfe {
             System.err.println("#########################################################");
             System.err.println();
         }
-        if (!certificado.isValido()) {
-            throw new CertificadoException("Certificado Vencido!");
-        }
+//        No nosso caso, não podemos barrar a abertura do PDV, pelo motivo do certificado estar vencido.
+//        if (!certificado.isValido()) {
+//            throw new CertificadoException("Certificado Vencido!");
+//        }
         return configuracoesNfe;
     }
 
